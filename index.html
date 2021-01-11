@@ -16,6 +16,9 @@
       </header>
 
       <div id="app">
+        <select v-model="genre">
+          <option v-for="singleGenre in genre">{{singleGenre}}</option>
+        </select>
         <div class="cds-container container" v-for="album in albums">
           <!-- Disco ad esempio -->
           <div class="cd">

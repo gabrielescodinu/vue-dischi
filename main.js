@@ -8,8 +8,10 @@
 let app = new Vue ({
   el: "#app",
   data: {
-    albums: [
-    ],
+    albums: [],
+    genre: ["pop", "rock", "metal", "jazz"],
+  },
+  methods: {
   },
   mounted() {
     const _self = this;
