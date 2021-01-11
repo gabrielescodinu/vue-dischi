@@ -8,18 +8,16 @@
 let app = new Vue ({
   el: "#app",
   data: {
-    albumPoster: "",
-    albumTitle: "",
-    albumAuthor: "",
-    albumGenre: "",
-    albumYear: "",
+    albums: [
+    ],
   },
   mounted() {
-    const self = this;
+    const _self = this;
 
-    axios.get("https://cors-anywhere.herokuapp.com/https://flynn.boolean.careers/exercises/api/array/music")
+    axios.get("https://flynn.boolean.careers/exercises/api/array/music")
     .then(response => {
-      self.albumTitle = response.data.title;
+      console.log(response);
+      _self.albums = response.data.response;
     })
     .catch(function (error) {
       console.log(error);

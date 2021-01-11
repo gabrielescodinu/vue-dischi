@@ -16,17 +16,16 @@
       </header>
 
       <div id="app">
-        <div class="cds-container container" v-for="">
+        <div class="cds-container container" v-for="album in albums">
           <!-- Disco ad esempio -->
           <div class="cd">
-            <img src="" alt="">
-            <h3>Ten's Summoners Tales</h3>
-            <span class="author">Sting</span>
-            <span class="year">1993</span>
+            <img :src="album.poster">
+            <h3>{{album.title}}</h3>
+            <span class="author">{{album.author}}</span>
+            <span class="year">{{album.year}}</span>
           </div>
         </div>
       </div>
-
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
         integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
