@@ -16,13 +16,15 @@
       </header>
 
       <div id="app">
-        <select v-model="genre">
+        <!-- <select v-model="genre">
           <option v-for="singleGenre in genre">{{singleGenre}}</option>
-        </select>
-        <div class="cds-container container" v-for="album in albums">
+        </select> -->
+        <div class="cds-container container" >
           <!-- Disco ad esempio -->
-          <div class="cd">
-            <img :src="album.poster">
+          <div v-for="album in albums" class="cd">
+            <a href="#">
+              <img :src="album.poster">              
+            </a>
             <h3>{{album.title}}</h3>
             <span class="author">{{album.author}}</span>
             <span class="year">{{album.year}}</span>

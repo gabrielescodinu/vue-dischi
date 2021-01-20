@@ -50,7 +50,10 @@ header img {
 .cd img {
   max-width: 100%;
 }
-
+.cd img:hover {
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
 .cd h3 {
   margin: 20px 0;
   color: white;
